@@ -1,0 +1,59 @@
+###############################################################################
+# 0. Start from a clean slate
+###############################################################################
+*
+!*/
+# Keep Git metadata files
+!.gitignore
+!.gitattributes
+!.gitmodules
+
+###############################################################################
+# 1. Project essentials that *must* be versioned
+###############################################################################
+!*.uproject
+!/Source/**
+!/Config/**
+!/Plugins/**
+
+# Content: only cooked assets (uasset / umap) are kept
+!/Content/**/*.uasset
+!/Content/**/*.umap
+
+# Raw sources live outside Content
+!/RawContent/**
+
+###############################################################################
+# Unreal Engine templates you don’t want in source control
+###############################################################################
+Content/StarterContent/
+Content/IndustryPropsPack6/
+Content/TM/
+
+###############################################################################
+# 2. Build artefacts & transient data (never commit)
+###############################################################################
+# Unreal build outputs
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+# VS / Rider / CLion
+.vs/
+.idea/
+*.opensdf
+*.sdf
+*.VC.db
+*.vcxproj*
+# Xcode, Rider, Visual Studio solutions
+*.xcodeproj
+*.xcworkspace
+*.sln
+*.suo
+# Logs and temp files
+*.log
+*.tmp
+# OS cruft
+.DS_Store
+Thumbs.db
